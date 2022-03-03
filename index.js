@@ -69,7 +69,10 @@ for (let i = 0; i < Object.keys(data).length; i++) {
 
 const chart = root.container.children.push(am5xy.XYChart.new(root, {
 	panX: false,
-	panY: false
+	panY: false,
+	wheelX: "panX",
+  	wheelY: "zoomX",
+  	layout: root.verticalLayout
 }));
 
 const xRenderer = am5xy.AxisRendererX.new(root, { minGridDistance: 30 });
